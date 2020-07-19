@@ -3,6 +3,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { AntDesign, Ionicons } from '@expo/vector-icons';
 
+import PayButton from './components/PayButton';
+
 import HomeScreen from './pages/Home';
 import WalletScreen from './pages/Wallet';
 import PayScreen from './pages/Pay';
@@ -18,10 +20,6 @@ const icons = {
 		lib: AntDesign,
 		name: 'creditcard',
 	},
-	Pay: {
-		lib: AntDesign,
-		name: 'shoppingcart',
-	},
 	Notifications: {
 		lib: Ionicons,
 		name: 'ios-notifications-outline',
@@ -34,16 +32,28 @@ const icons = {
 
 export default function Navigation() {
 	return (
+		// Container precisa envolver a bottom tab
 		<NavigationContainer>
 			<Tab.Navigator
 				// Desestruturação, dos paramêtros retornados pela função
 				// apenas o route será acessado
-				screenOptions={({ route }) => ({
-					tabBarIcon: ({ color, size }) => {
+				screenOptions={({ route, navigation }) => ({
+					tabBarIcon: ({ color, size, focused }) => {
+						// Se a tela for Pay, o botão será retornado
+						if (route.name === 'Pay') {
+							return (
+								<PayButton
+									// Quando o botão é pressionado
+									onPress={() => navigation.navigate('Pay')}
+									focused={focused}
+								/>
+							);
+						}
 						const { lib: Icon, name } = icons[route.name];
 						return <Icon name={name} size={size} color={color} />;
 					},
 				})}
+				// Customiza as cores da Tab
 				tabBarOptions={{
 					style: {
 						backgroundColor: '#131418',
@@ -71,7 +81,7 @@ export default function Navigation() {
 					name="Pay"
 					component={PayScreen}
 					options={{
-						title: 'Pagar',
+						title: '',
 					}}
 				/>
 				{/* Renderizam a tela pagar pois não serão feitas agora */}
