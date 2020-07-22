@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
 	Feather,
 	MaterialCommunityIcons,
@@ -40,17 +40,37 @@ import {
 import creditCard from '../../images/credit-card.png';
 
 export default function Wallet() {
+	const [isVisible, setIsVisible] = useState(true);
+	const [useBalance, setUseBalance] = useState(true);
+
+	function handleToggleVisibility() {
+		// Negação do estado anterior
+		setIsVisible((prevState) => !prevState);
+	}
+
+	function handleToggleUseBalance() {
+		setUseBalance((prevState) => !prevState);
+	}
+
 	return (
 		<Wrapper>
-			<Header colors={['#52E78C', '#1AB563']}>
+			<Header
+				colors={
+					useBalance ? ['#52E78C', '#1AB563'] : ['#D3D3D3', '#868686']
+				}
+			>
 				<HeaderContainer>
 					<Title>Saldo PicPay</Title>
 					<BalanceContainer>
 						<Value>
-							R$ <Bold>81,00</Bold>
+							R$ <Bold>{isVisible ? '81,00' : '----'}</Bold>
 						</Value>
-						<EyeButton>
-							<Feather name="eye" size={28} color="#fff" />
+						<EyeButton onPress={handleToggleVisibility}>
+							<Feather
+								name={isVisible ? 'eye' : 'eye-off'}
+								size={28}
+								color="#fff"
+							/>
 						</EyeButton>
 					</BalanceContainer>
 					<Info>Seu saldo está rendendo 100% do CDI</Info>
@@ -73,7 +93,10 @@ export default function Wallet() {
 
 			<UseBalance>
 				<UseBalanceTitle>Usar saldo ao pagar</UseBalanceTitle>
-				<Switch />
+				<Switch
+					value={useBalance}
+					onValueChange={handleToggleUseBalance}
+				/>
 			</UseBalance>
 
 			<PaymentMethods>
