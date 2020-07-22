@@ -6,8 +6,10 @@ export const Wrapper = styled.View`
 	flex: 1;
 `;
 
+export const Container = styled.ScrollView``;
+
 export const Header = styled(LinearGradient)`
-	height: 250px;
+	height: 300px;
 `;
 
 export const HeaderContainer = styled.SafeAreaView`
@@ -142,7 +144,7 @@ export const AddLabel = styled.Text`
 
 export const UseTicketContainer = styled.View`
 	align-items: center;
-	margin-top: 20px;
+	margin: 20px 0;
 `;
 
 export const UseTicketButton = styled.TouchableOpacity`
