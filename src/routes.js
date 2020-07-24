@@ -9,6 +9,7 @@ import PayButton from './components/PayButton';
 import HomeScreen from './pages/Home';
 import WalletScreen from './pages/Wallet';
 import PayScreen from './pages/Pay';
+import NotificationsScreen from './pages/Notifications';
 
 const Tab = createBottomTabNavigator();
 
@@ -94,7 +95,7 @@ export default function Routes() {
 					{/* Renderizam a tela pagar pois não serão feitas agora */}
 					<Tab.Screen
 						name="Notifications"
-						component={PayScreen}
+						component={NotificationsScreen}
 						options={{
 							title: 'Notificações',
 						}}
