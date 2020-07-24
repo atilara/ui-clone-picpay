@@ -10,6 +10,7 @@ import HomeScreen from './pages/Home';
 import WalletScreen from './pages/Wallet';
 import PayScreen from './pages/Pay';
 import NotificationsScreen from './pages/Notifications';
+import SettingsScreen from './pages/Settings';
 
 const Tab = createBottomTabNavigator();
 
@@ -102,7 +103,7 @@ export default function Routes() {
 					/>
 					<Tab.Screen
 						name="Settings"
-						component={PayScreen}
+						component={SettingsScreen}
 						options={{
 							title: 'Ajustes',
 						}}
