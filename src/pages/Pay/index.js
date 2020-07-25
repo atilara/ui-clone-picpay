@@ -1,6 +1,30 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { MaterialCommunityIcons, AntDesign } from '@expo/vector-icons';
+
+import {
+	Wrapper,
+	Header,
+	SearchContainer,
+	SearchBar,
+	Container,
+} from './styles';
+
 
 export default function Pay() {
-	return <Text>Pay</Text>;
+	return (
+		<Wrapper>
+			<Header>
+				<MaterialCommunityIcons
+					name="qrcode-scan"
+					size={30}
+					color="#10c86e"
+				/>
+				<SearchContainer>
+					<AntDesign name="search1" size={18} color="white" />
+					<SearchBar />
+				</SearchContainer>
+			</Header>
+			<Container></Container>
+		</Wrapper>
+	);
 }

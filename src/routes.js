@@ -93,7 +93,6 @@ export default function Routes() {
 							title: '',
 						}}
 					/>
-					{/* Renderizam a tela pagar pois não serão feitas agora */}
 					<Tab.Screen
 						name="Notifications"
 						component={NotificationsScreen}
