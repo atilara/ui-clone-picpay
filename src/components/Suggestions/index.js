@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Option, Img, Label } from './styles';
+import { Container, Title, Option, Img, Label } from './styles';
 
 import img1 from '../../images/01.png';
 import img2 from '../../images/02.png';
@@ -48,15 +48,18 @@ const items = [
 	},
 ];
 
-export default function Suggestions() {
+export default function Suggestions(props) {
 	return (
-		<Container>
-			{items.map((item) => (
-				<Option key={item.key}>
-					<Img source={item.img} />
-					<Label>{item.label}</Label>
-				</Option>
-			))}
-		</Container>
+		<>
+			<Title>Sugestões para você</Title>
+			<Container black={props.black}>
+				{items.map((item) => (
+					<Option key={item.key}>
+						<Img source={item.img} />
+						<Label>{item.label}</Label>
+					</Option>
+				))}
+			</Container>
+		</>
 	);
 }

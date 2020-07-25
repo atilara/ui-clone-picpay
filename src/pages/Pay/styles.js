@@ -24,6 +24,7 @@ export const SearchContainer = styled.View`
 export const SearchBar = styled.TextInput.attrs(() => ({
 	placeholder: 'Quem você quer pagar?',
 	placeholderTextColor: '#fff',
+	color: '#fff',
 }))`
 	flex: 0.9;
 	margin: 0 8px;
