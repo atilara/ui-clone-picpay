@@ -30,5 +30,3 @@ export const SearchBar = styled.TextInput.attrs(() => ({
 	height: 40px;
 	align-items: center;
 `;
-
-export const Container = styled.ScrollView``;
