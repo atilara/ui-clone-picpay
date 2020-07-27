@@ -16,6 +16,11 @@ import {
 	Title,
 	Description,
 	Options,
+	Contacts,
+	ContactsContainer,
+	Emoji,
+	Button,
+	ButtonLabel,
 } from './styles';
 
 import img1 from '../../images/01.png';
@@ -71,6 +76,22 @@ export default function Main() {
 						</Item>
 					))}
 				</Services>
+
+				<Contacts>
+					<Header>Contatos</Header>
+					<ContactsContainer>
+						<Emoji>🙂</Emoji>
+						<Title>Encontre seus amigos</Title>
+						<Description>
+							Libere acesso a sua agenda para saber quem já está
+							no PicPay. Junte-se aos seus amigos apara pagar e
+							receber dinheiro mais rápido!
+						</Description>
+						<Button>
+							<ButtonLabel>Autorizar agenda</ButtonLabel>
+						</Button>
+					</ContactsContainer>
+				</Contacts>
 			</Container>
 		</Wrapper>
 	);

@@ -49,3 +49,32 @@ export const Description = styled.Text`
 export const Options = styled.TouchableOpacity`
 	margin: 0 12px;
 `;
+
+export const Contacts = styled.View`
+	margin: 10px 0;
+`;
+
+export const ContactsContainer = styled.View`
+	align-items: center;
+	margin: 10px 20px;
+`;
+
+export const Emoji = styled.Text`
+	font-size: 100px;
+`;
+
+export const Button = styled.TouchableOpacity`
+	justify-content: center;
+	align-items: center;
+	background: #0db060;
+	height: 50px;
+	width: 270px;
+	margin: 15px 0;
+	border-radius: 24px;
+`;
+
+export const ButtonLabel = styled.Text`
+	color: #fff;
+	font-weight: bold;
+	font-size: 16px;
+`;
