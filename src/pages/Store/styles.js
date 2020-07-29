@@ -35,3 +35,38 @@ export const Header = styled.Text`
 	font-weight: bold;
 	text-transform: uppercase;
 `;
+
+export const Highlights = styled(Header)`
+	margin: 0 12px;
+`;
+
+export const Card = styled.View`
+	background: #1e222b;
+	flex-direction: row;
+	margin: 16px;
+	border-radius: 8px;
+	height: 160px;
+	align-items: center;
+`;
+
+export const Phone = styled.Text`
+	font-size: 140px;
+	align-items: center;
+`;
+
+export const Content = styled.View`
+	justify-content: center;
+	width: 200px;
+`;
+
+export const Title = styled.Text`
+	color: #fff;
+	font-size: 35px;
+	font-weight: bold;
+	margin-bottom: 8px;
+`;
+
+export const Description = styled.Text`
+	color: #fff;
+	font-size: 16px;
+`;

@@ -9,6 +9,12 @@ import {
 	Header,
 	SeeAll,
 	Label,
+	Highlights,
+	Card,
+	Phone,
+	Content,
+	Title,
+	Description,
 } from './styles';
 
 import List from '../../components/List';
@@ -17,6 +23,17 @@ export default function Main() {
 	return (
 		<Wrapper>
 			<Container>
+				<Highlights>Destaques</Highlights>
+				<Card>
+					<Phone>📱</Phone>
+					<Content>
+						<Title>R$10 de volta</Title>
+						<Description>
+							Usando um cartão de crédito na sua primeira recarga
+							de celular, você ganha R$10 de volta.
+						</Description>
+					</Content>
+				</Card>
 				<ListContainer>
 					<HeaderContainer>
 						<Header>Central de Doações</Header>
