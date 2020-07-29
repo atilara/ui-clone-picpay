@@ -2,7 +2,7 @@
 
 ## ℹ Sobre
 
-Clone do aplicativo mobile do PicPay, aplicativo funciona como uma carteira digital. Estudado neste [link](https://www.youtube.com/playlist?list=PLPXWI3llyMiIfgu7p65MxdEKrplFbGbMg).
+Clone do aplicativo mobile do PicPay, aplicativo funciona como uma carteira digital. Estudado neste [link](https://www.youtube.com/playlist?list=PLPXWI3llyMiIfgu7p65MxdEKrplFbGbMg). Fui além do desafio proposto e denvolvi as três telas finais, que não são mostradas no vídeo. O aprendizado foi ótimo e muito significativo, me deixando mais confortável em trabalhar com as tecnologias. 
 
 ## 🛠 Tecnologias utilizadas
 
